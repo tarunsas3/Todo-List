@@ -12,7 +12,7 @@
           placeholder="Type your todo list">
       <button class="new-todo-button"></button>
     </header>
-    <section class="main" v-show="todos.length" v-cloak>
+    <section class="main">
       <div class="completed-wrapper">
         <input id="toggle-all" class="toggle-all" type="checkbox">
         <label for="toggle-all">Complete all tasks</label>
@@ -22,7 +22,7 @@
         <!-- Todo items will be dynamically generated here -->
       </ul>
     </section>
-    <footer class="footer" v-show="todos.length" v-cloak>
+    <footer class="footer">
       <span class="todo-count">
         <strong></strong> tasks left
       </span>
