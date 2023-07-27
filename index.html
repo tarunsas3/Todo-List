@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="todoapp">
+    <header class="header">
+      <input class="new-todo"
+          autocomplete="off"
+          placeholder="Type your todo list">
+      <button class="new-todo-button"></button>
+    </header>
+    <section class="main" v-show="todos.length" v-cloak>
+      <div class="completed-wrapper">
+        <input id="toggle-all" class="toggle-all" type="checkbox">
+        <label for="toggle-all">Complete all tasks</label>
+        <button class="clear-completed">Clear completed</button>
+      </div>
+      <ul class="todo-list">
+        <!-- Todo items will be dynamically generated here -->
+      </ul>
+    </section>
+    <footer class="footer" v-show="todos.length" v-cloak>
+      <span class="todo-count">
+        <strong></strong> tasks left
+      </span>
+      <ul class="filters">
+        <li><a class="selected" data-filter="all" href="#">All</a></li>
+        <li><a data-filter="active" href="#">Uncompleted</a></li>
+        <li><a data-filter="completed" href="#">Completed</a></li>
+      </ul>
+    </footer>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
